@@ -8,25 +8,27 @@ public class DropdownAction : MonoBehaviour {
     List<string> names = new List<string>() { "1 floor", "2 floor", "3 floor" };
 
     public Dropdown dropdown;
+    public Button button;
     public Canvas firstFCanvas;
     public Canvas secondFCanvas;
     public Canvas thirdFCanvas;
 
     public void DropdownIndexChanged(int index)
     {
-        if(index == 0)
+        if(index == 0 && button.enabled==true)
         {
             firstFCanvas.enabled = true;
             secondFCanvas.enabled = false;
             thirdFCanvas.enabled = false;
+
         }
-        else if (index == 1)
+        else if (index == 1 && button.enabled == true)
         {
             firstFCanvas.enabled = false;
             secondFCanvas.enabled = true;
             thirdFCanvas.enabled = false;
         }
-        else if (index == 2)
+        else if (index == 2 && button.enabled == true)
         {
             firstFCanvas.enabled = false;
             secondFCanvas.enabled = false;
